@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_check_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/checkbox_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="全选"
+                android:textColor="#303235"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="合计:"
+                android:textColor="#303235"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_shopcart_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="￥0.00"
+                android:textColor="#ed3f3f"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_check_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ed3f3f"
+                android:text="去结算"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="全选"
+                android:textColor="#303235"
+                android:textSize="15sp" />
+
+            <com.allen.library.SuperButton
+                android:id="@+id/btn_delete"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="删除"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                stv:sCornersRadius="5dp"
+                stv:sSelectorNormalColor="@color/red"
+                stv:sSelectorPressedColor="@color/gray"
+                stv:sUseSelector="true" />
+
+            <com.allen.library.SuperButton
+                android:id="@+id/btn_collection"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="15dp"
+                android:enabled="false"
+                android:text="收藏"
+                android:textColor="@color/red"
+                stv:sCornersRadius="5dp"
+                stv:sSelectorDisableColor="@color/gray"
+                stv:sSelectorNormalColor="@color/colorAccent"
+                stv:sSelectorPressedColor="@color/colorPrimary"
+                stv:sUseSelector="true" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

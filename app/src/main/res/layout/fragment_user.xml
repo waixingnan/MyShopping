@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.example.jack.myshopping.user.util.MyScrollView
+        android:id="@+id/user_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/bg">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/ic_head"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/login_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="登录/注册"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftTextSize="14dip"
+                stv:sLeftTextString="我的订单"
+                stv:sRightIconRes="@drawable/home_arrow_right"
+                stv:sRightTextColor="@color/gray_btn"
+                stv:sRightTextSize="14sp"
+                stv:sRightTextString="查看全部订单" />
+
+            <include layout="@layout/user_layout" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mes_centre "
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                stv:sLeftIconRes="@drawable/uy"
+                stv:sLeftTextString="消息中心" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/uu"
+                stv:sLeftTextString="收货地址" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/uv"
+                stv:sLeftTextString="美食相册" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/uy"
+                stv:sLeftTextString="我的收藏" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/uv"
+                stv:sLeftTextString="版本更新" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                stv:sDividerLineType="both"
+                stv:sLeftIconRes="@drawable/v0"
+                stv:sLeftTextString="积分商城"
+                stv:sRightTextColor="@color/gray_btn"
+                stv:sRightTextSize="10sp"
+                stv:sRightTextString="8888积分" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                stv:sDividerLineType="both"
+                stv:sLeftIconRes="@drawable/v1"
+                stv:sLeftTextString="会员中心" />
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/v2"
+                stv:sLeftTextSize="@dimen/text_size_14sp"
+                stv:sLeftTextString="加盟合作" />
+
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sLeftIconRes="@drawable/uv"
+                stv:sLeftTextString="设置" />
+
+        </LinearLayout>
+
+    </com.example.jack.myshopping.user.util.MyScrollView>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+</FrameLayout>
+

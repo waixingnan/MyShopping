@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.jack.myshopping"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //添加如下配置就OK了
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.youth.banner:banner:1.4.10'
+    //    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.github.fodroid:XStatusBarHelper:v1.1'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    implementation 'com.cjj.materialrefeshlayout:library:1.3.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation project(':SuperTextView-master')
+    implementation project(':SplashActivity-master')
+    //    implementation 'com.android.support:percent:27.1.1'
+    implementation files('libs/jcore-android-1.2.3.jar')
+
+}
+
+//ShareSDK Maven集成配置
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "270c7ab8038ac"
+    appSecret "cad8b1537b26bb6de77a9e5202fd8c2d"
+    ShareSDK {
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient true
+            }
+            TencentWeibo {
+                appKey "801307650"
+                appSecret "ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Douban {
+                appKey "031a96a3aa8b28af094fc3eaffa17a0d"
+                appSecret "2e675e730571b75d"
+                callbackUri "http://mob.com"
+            }
+            Renren {
+                appId "226427"
+                appKey "fc5b8aed373c4c27a05b712acba0f8c3"
+                appSecret "f29df781abdd4f49beca5a2194676ca4"
+            }
+            KaiXin {
+                appKey "358443394194887cee81ff5890870c7c"
+                appSecret "da32179d859c016169f66d90b6db2a23"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Facebook {
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+                shareByAppClient true
+            }
+            Twitter {
+                appKey "LRBM0H75rWrU9gNHvlEAA2aOy"
+                appSecret "gbeWsZvA9ELJSdoBzJ5oLKX0TU09UOwrzdGfo9Tg7DjyGuMe8G"
+                callbackUri "http://mob.com"
+            }
+            LinkedIn {
+                appKey "ejo5ibkye3vo"
+                appSecret "cC7B2jpxITqPLZ5M"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient true
+            }
+            Email {}
+            ShortMessage {}
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+                bypassApproval false
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+                shareByAppClient true
+                bypassApproval false
+            }
+            Yixin {
+                appId "yx0d9a9f9088ea44d78680f3274da1765f"
+                bypassApproval false
+            }
+            Alipay {
+                appId "2015072400185895"
+            }
+        }
+    }
+}

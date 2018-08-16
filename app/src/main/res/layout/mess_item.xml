@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/mes_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:text="@string/title_mes"
+        android:padding="@dimen/dp_10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_height="@dimen/wrap_content" />
+    <TextView
+        android:id="@+id/mes_url_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mes_title"
+        android:layout_width="0dp"
+        android:padding="@dimen/dp_10dp"
+        android:text="@string/mes_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mes_date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mes_url_text"
+        android:padding="@dimen/dp_10dp"
+        android:text="@string/current_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mes_date"
+        android:background="@color/line_bg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0.5dp"/>
+</android.support.constraint.ConstraintLayout>

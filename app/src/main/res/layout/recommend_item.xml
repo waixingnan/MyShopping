@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0.5dp"
+        android:background="@color/line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/home_arrow_left_new"
+        android:drawablePadding="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:paddingTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:paddingLeft="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:text="新品推荐"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+    <TextView
+        android:id="@+id/tv_more_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/home_arrow_right"
+        android:paddingTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:paddingRight="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:text="查看更多"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+    <GridView
+        android:id="@+id/gv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:numColumns="3"
+        android:layout_marginTop="@dimen/dp_5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_more_recommend"></GridView>
+</android.support.constraint.ConstraintLayout>

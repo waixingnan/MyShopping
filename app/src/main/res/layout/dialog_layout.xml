@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iv_goodinfo_photo"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/dp_10dp"
+        android:layout_marginLeft="@dimen/dp_10dp"
+        android:src="@drawable/ic_head"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_goodinfo_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="凤凰图 jsk 类别：山海经 凤凰图 JSK"
+        android:textSize="@dimen/text_size_14sp"
+        android:layout_marginLeft="@dimen/dp_10dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_goodinfo_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_goodinfo_price"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="￥300"
+        android:paddingTop="10dp"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_14sp"
+        android:layout_marginLeft="@dimen/dp_10dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_goodinfo_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_goodinfo_name" />
+
+
+    <TextView
+        android:id="@+id/kuanshi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10dp"
+        android:text="款式"
+        android:textSize="@dimen/text_size_14sp"
+        android:layout_marginTop="@dimen/dp_30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_goodinfo_price" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10dp"
+        android:layout_marginLeft="@dimen/dp_10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kuanshi">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="L" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="XL"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/dp_10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_size">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="数量" />
+
+        <com.example.jack.myshopping.shoppingcart.utils.NumberAddSubView
+            android:id="@+id/nas_goodinfo_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_goodinfo_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bt_goodinfo_confim"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_num" />
+
+    <Button
+        android:id="@+id/bt_goodinfo_confim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_goodinfo_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/bt_goodinfo_cancel"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+    android:gravity="center_horizontal"
+    android:paddingRight="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_figure"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/tv_cover_price"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5dp"
+        android:gravity="center_horizontal"
+        android:text="￥102.00"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2dp">
+
+        <TextView
+            android:id="@+id/tv_origin_price"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="￥159.00"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/gray" />
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

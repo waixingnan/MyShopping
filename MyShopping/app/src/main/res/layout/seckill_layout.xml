@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <TextView
+            android:id="@+id/tv_title_seckill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawablePadding="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            android:paddingTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            android:paddingLeft="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            app:layout_constraintRight_toLeftOf="@+id/tv_time_seckill"
+            android:drawableLeft="@drawable/home_arrow_left_flash"
+            android:text="今日闪购 距·结束"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_time_seckill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_title_seckill"
+            android:background="@drawable/time_shape"
+            android:paddingVertical="@dimen/paddingLeft_Top_Right_Bottom_3dp"
+            android:text="00:00:00"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_more_seckill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            android:paddingRight="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+            android:drawableRight="@drawable/home_arrow_right"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/gray"
+            android:text="查看更多" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_seckill"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/paddingLeft_Top_Right_Bottom_5dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_more_seckill"/>
+</android.support.constraint.ConstraintLayout>
